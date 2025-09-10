@@ -28,7 +28,11 @@ class MainActivity : AppCompatActivity() {
 
         button.setOnClickListener {
             // Toast.makeText(it.context, "Clicked Button!", Toast.LENGTH_SHORT).show()
-            counter++
+            if (counter >= 100) {
+                counter *= 2   // double after reaching 100
+            } else {
+                counter++
+            }
             textView.text = counter.toString()
         }
 
